@@ -37,7 +37,7 @@ type Account struct {
 // accounts (derived from the same seed).
 type Wallet interface {
 	// URL retrieves the canonical path under which this wallet is reachable. It is
-	// user by upper layers to define a sorting order over all wallets from multiple
+	// used by upper layers to define a sorting order over all wallets from multiple
 	// backends.
 	URL() URL
 
@@ -139,7 +139,7 @@ type Backend interface {
 	//
 	// The resulting wallet list will be sorted alphabetically based on its internal
 	// URL assigned by the backend. Since wallets (especially hardware) may come and
-	// go, the same wallet might appear at a different positions in the list during
+	// go, the same wallet might appear in a different position at the list during
 	// subsequent retrievals.
 	Wallets() []Wallet
 
